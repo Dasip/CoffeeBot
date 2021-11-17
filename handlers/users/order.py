@@ -22,7 +22,8 @@ async def choose_shipping(query: types.ShippingQuery):
     await bot.answer_shipping_query(shipping_query_id=query.id,
                                     shipping_options=[
                                         PICKUP_SHIPPING
-                                    ])
+                                    ],
+                                    ok=True)
 
 @dp.pre_checkout_query_handler()
 async def pre_checkout_query(query: types.PreCheckoutQuery):
